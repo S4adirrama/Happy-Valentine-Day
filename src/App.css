@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   margin: 0;
   padding: 0;
@@ -6,15 +7,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
+/* Valentine Container */
 .valentine-container {
   text-align: center;
   position: relative;
   width: 100%;
   max-width: 600px;
+  padding: 20px;
 }
 
 /* Card Styling */
@@ -26,6 +29,8 @@ body {
   position: relative;
   z-index: 2;
   transition: transform 0.5s ease-in-out;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .special-animation {
@@ -45,11 +50,11 @@ body {
 }
 
 .hearts-left {
-  left: -50px;
+  left: -30px;
 }
 
 .hearts-right {
-  right: -50px;
+  right: -30px;
 }
 
 /* Heart Animation */
@@ -79,6 +84,7 @@ body {
 /* Tenor GIF */
 .tenor-gif-embed {
   margin-top: 20px;
+  max-width: 100%;
 }
 
 /* Name Dropdown */
@@ -91,6 +97,8 @@ body {
   background: pink;
   cursor: pointer;
   transition: 0.3s;
+  width: 90%;
+  max-width: 300px;
 }
 
 .name-dropdown:hover {
@@ -98,16 +106,22 @@ body {
 }
 
 /* Buttons */
-.special-btn {
-  margin: 20px;
-  padding: 10px 20px;
-  background: red;
-  color: white;
+.special-btn,
+.confetti-btn {
+  margin: 10px;
+  padding: 12px 25px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
+  width: 90%;
+  max-width: 250px;
+}
+
+.special-btn {
+  background: red;
+  color: white;
 }
 
 .special-btn:hover {
@@ -115,15 +129,8 @@ body {
 }
 
 .confetti-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
   background: gold;
   color: black;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
 .confetti-btn:hover {
@@ -143,4 +150,66 @@ body {
 @keyframes confetti-fall {
   0% { transform: translateY(-100vh) rotate(0deg); }
   100% { transform: translateY(0) rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+
+  .valentine-container {
+    max-width: 90%;
+  }
+
+  .card {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .hearts-left, .hearts-right {
+    width: 70px;
+    height: 100%;
+    top: 10px;
+  }
+
+  .hearts-left {
+    left: -20px;
+  }
+
+  .hearts-right {
+    right: -20px;
+  }
+
+  .heart {
+    width: 25px;
+    height: 25px;
+  }
+
+  .special-btn, .confetti-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hearts-left, .hearts-right {
+    display: none;
+  }
+
+  .valentine-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  .special-btn, .confetti-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
