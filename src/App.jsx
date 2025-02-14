@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import confetti from "canvas-confetti";
 import "./App.css";
-import heartImg from "./assets/heart.png"; // Ensure this path is correct
+import heartImg from "./assets/heart.png"; 
 
 const names = [
-  "Aikhan", "Altair", "Arystan", "Akniet", "Aruzhan", "Azhar", "Aisultan", "Nurzhan"
+  "Aikhan", "Altair", "Arystan", "Akniet", "Aruzhan", "Azhar", "Aisultan", "Nurzhan", "Nursultan"
 ];
 
 

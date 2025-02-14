@@ -8,6 +8,7 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .valentine-container {
@@ -15,9 +16,13 @@ body {
   position: relative;
   width: 100%;
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Card Styling */
+/* Centered & Smaller Card */
 .card {
   background: white;
   padding: 20px;
@@ -26,19 +31,17 @@ body {
   position: relative;
   z-index: 2;
   transition: transform 0.5s ease-in-out;
-  max-width: 90%;
-}
-
-.special-animation {
-  transform: scale(1.1) rotate(5deg);
+  max-width: 60%;
+  min-width: 250px;
 }
 
 /* Hearts Container */
 .hearts-left, .hearts-right {
   position: absolute;
-  width: 120px; /* Increased for better visibility */
+  width: 100px;
   height: 100%;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +50,7 @@ body {
 }
 
 .hearts-left {
-  left: 10px; /* Adjusted to prevent cutting off */
+  left: 10px;
 }
 
 .hearts-right {
@@ -67,16 +70,6 @@ body {
   0% { transform: translateY(0px) rotate(0deg); opacity: 1; }
   50% { transform: translateY(-50px) rotate(20deg); opacity: 0.8; }
   100% { transform: translateY(-100px) rotate(-20deg); opacity: 0; }
-}
-
-.heart:nth-child(odd) {
-  animation-duration: 3s;
-  left: 20%;
-}
-
-.heart:nth-child(even) {
-  animation-duration: 5s;
-  left: 70%;
 }
 
 /* Name Dropdown */
@@ -154,16 +147,16 @@ body {
   }
 
   .valentine-container {
-    width: 95%;
+    width: 90%;
   }
 
   .card {
-    max-width: 80%; /* Smaller card */
+    max-width: 70%;
     padding: 15px;
   }
 
   .hearts-left, .hearts-right {
-    width: 80px; /* Adjusted for better mobile visibility */
+    width: 80px;
   }
 
   .heart {
