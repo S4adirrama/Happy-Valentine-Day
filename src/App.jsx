@@ -7,12 +7,6 @@ const names = [
   "Aikhan", "Altair", "Arystan", "Akniet", "Aruzhan", "Azhar", "Aisultan", "Nurzhan"
 ];
 
-const fonts = {
-  Aikhan: "Comic Sans MS, cursive", Altair: "Papyrus, fantasy",
-  Arystan: "Impact, sans-serif", Akniet: "Brush Script MT, cursive",
-  Aruzhan: "Courier New, monospace", Azhar: "Lucida Console, monospace",
-  Aisultan: "Chalkduster, fantasy", Nurzhan: "Marker Felt, sans-serif"
-};
 
 function App() {
   const [selectedName, setSelectedName] = useState(names[0]);
@@ -56,7 +50,7 @@ function App() {
 
       <div className="card-wrapper">
         <div className={`card ${animate ? "special-animation" : ""}`}>
-          <h1 style={{ fontFamily: fonts[selectedName], color: "black" }}>
+          <h1 style={{ fontFamily: "Comic Sans MS, cursive", color: "black" }}>
             Happy Valentine's Day, {selectedName}! 💖
           </h1>
           <div className="tenor-gif-embed" data-postid="15731672189433759952" data-share-method="host" data-aspect-ratio="1" data-width="100%">
